@@ -26,7 +26,7 @@ def process_data(subtask1_df, subtask2_df, exchange_rates):
     for _, row in merged_data.iterrows():
         amount = row['amount']
         currency = row['currency']
-        fee = row['fee']
+        fee = row['fee'] * 100
         
         # Check if the currency is in the exchange rates dictionary
         if currency in exchange_rates:
