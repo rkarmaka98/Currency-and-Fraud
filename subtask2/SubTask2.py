@@ -55,8 +55,8 @@ def process_data(subtask1_df, subtask2_df, exchange_rates):
 
 def main():
     # Load the CSV files for subtask1 and subtask2
-    subtask1_df = pd.read_csv('subtask1.csv')  # Contains 'amount', 'currency'
-    subtask2_df = pd.read_csv('subtask2.csv')  # Contains 'fee', 'currency'
+    subtask1_df = pd.read_csv('subtask2/subtask1.csv')  # Contains 'amount', 'currency'
+    subtask2_df = pd.read_csv('subtask2/subtask2.csv')  # Contains 'fee', 'currency'
     
     # Fetch the latest exchange rates
     exchange_rates = get_latest_exchange_rates()
