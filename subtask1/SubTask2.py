@@ -43,7 +43,9 @@ def process_data(subtask1_df, subtask2_df, exchange_rates):
                 print(f"Doubling the amount for {currency} due to low fee ({fee}%).")
 
             # Calculate the USD equivalent of the amount
-            amount = (amount * fee) / 100
+            # print(fee)
+            amount = amount * (1+fee/100) 
+            # print(amount)
             usd_value = amount / conversion_rate
             total_usd_value += usd_value
         else:
